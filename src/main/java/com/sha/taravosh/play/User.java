@@ -11,6 +11,7 @@ public class User {
 
     User(){}
 
+
     public User(long id, String userId, String firstName, String lastName, String email, int age) {
         this.id = id;
         this.userId = userId;
@@ -18,6 +19,25 @@ public class User {
         this.lastName = lastName;
         this.email = email;
         this.age = age;
+    }
+
+
+    public User(long id,String userId){
+        this.id = id;
+        this.userId = userId;
+    }
+
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", userId='" + userId + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", age=" + age +
+                '}';
     }
 }
 
