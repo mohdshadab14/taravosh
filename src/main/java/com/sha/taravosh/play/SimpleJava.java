@@ -1,30 +1,31 @@
 package com.sha.taravosh.play;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SimpleJava {
 
     public static void main(String[] args) {
 
-        User user1 = new User("Shadab");
-
-        User user2 = new User("xyz");
-        User user3 = new User("Testing");
+        List<User> allusers = giveAllUsers();
 
 
-        //user2.name = "some name";
-
-
-
-        System.out.println("User 1 Name is "+user1.name);
-        System.out.println("User 2 Name is "+user2.name);
-        System.out.println("User 3 name is "+user3.name);
-        int[] b = new int[100];
-        b[0] = 1;
-        b[5] = 100;
-
-        for(int i=0;i<100;i++){
-            //System.out.println("Value of array b index"+ i+ "is "+ b[i]);
-        }
     }
 
 
+    public static List<User> giveAllUsers(){
+        List<User> users = new ArrayList<>();
+
+        User shadab = new User(1,"mohdshadab","Mohamad","Shadab","mohd@gmail.com",35);
+        User s = new User(1,"hadab","Mohd","Shadab","mohd@gmail.com",35);
+        User h = new User(1,"mohd","Mohamad","Sha","mohd@gmail.com",35);
+        User a = new User(1,"mo","Mo","Sha","mohd@gmail.com",35);
+
+        users.add(shadab);
+        users.add(s);
+        users.add(h);
+        users.add(a);
+
+        return users;
+    }
 }
