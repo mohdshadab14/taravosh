@@ -30,6 +30,9 @@ public class Main {
         int sum = 0;
 
         // TODO: Write your logic here
+        for(int i=start;i<=end;i++){
+            sum = sum+i;
+        }
 
 
         System.out.println("Sum = " + sum);

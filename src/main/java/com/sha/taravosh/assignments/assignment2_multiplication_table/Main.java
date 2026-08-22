@@ -35,7 +35,11 @@ public class Main {
         int counter = 1;
 
         // TODO: Write your while loop here
-
+        while (counter<=10){
+            int table = number * counter;
+            System.out.println(number+ "*"+ counter +"="+table);
+            counter++;
+        }
 
     }
 }
