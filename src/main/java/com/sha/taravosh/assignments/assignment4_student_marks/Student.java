@@ -33,19 +33,23 @@ class Student {
 
     String name;
     int marksPerSubject;
-
+///nowheera - doubt why should i need to declare type in the constructor
     // TODO: Create a constructor that initializes
     //       name and marksPerSubject
+    public Student(String name, int marksPerSubject){
+        this.name = name;
+        this.marksPerSubject = marksPerSubject;
 
+    }
 
     int calculateTotalMarks() {
 
         int total = 0;
-
+         for( int Student =0; Student<=5; Student++){
+             total = marksPerSubject;
+         }
         // TODO: Use a for loop to add marksPerSubject
         //       5 times
-
-
         return total;
     }
 }
