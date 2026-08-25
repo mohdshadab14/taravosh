@@ -31,13 +31,14 @@ package com.sha.taravosh.assignments.assignment3_countdown;
 public class Main {
 
     public static void main(String[] args) {
-
         int count = 5;
 
-        // TODO: Write your countdown logic here
-
-
+//        // TODO: Write your countdown logic here
+       while (count >=5){
         // TODO: Print "Go!" here
-
+        System.out.println(count);
+           count--;
+       }
+        System.out.println(count);
     }
 }
