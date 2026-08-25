@@ -6,13 +6,13 @@ public class Main {
     public static void main(String[] args) {
 
         // TODO: Create a Student object using 'new'
-        //       Student name = Rahul
-        //       Marks per subject = 80
 
+//               Student name = Rahul
+//               Marks per subject = 80
+            Student rahul = new Student("Rahul", 80);
 
         // TODO: Print student name
-
-
+        System.out.println(rahul);
         // TODO: Call calculateTotalMarks()
         //       and print the result
     }
