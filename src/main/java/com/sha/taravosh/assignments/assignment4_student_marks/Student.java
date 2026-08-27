@@ -30,24 +30,26 @@ package com.sha.taravosh.assignments.assignment4_student_marks;
  */
 
 class Student {
-
+    //BELOW ARE ATTRIBUTES
     String name;
-    int marksPerSubject;
+    int marksEnglish;
+    int marksHindi;
+    int marksFrench;
+    int marksSci;
+    int marksMath;
+
 ///nowheera - doubt why should i need to declare type in the constructor
     // TODO: Create a constructor that initializes
     //       name and marksPerSubject
-    public Student(String name, int marksPerSubject){
-        this.name = name;
-        this.marksPerSubject = marksPerSubject;
+        public Student(String Name){
+        this.name = Name;
 
     }
 
     int calculateTotalMarks() {
 
         int total = 0;
-         for( int Student =0; Student<=5; Student++){
-             total = marksPerSubject;
-         }
+        total = this.marksSci + this.marksMath +this.marksHindi +this.marksFrench + this.marksEnglish;
         // TODO: Use a for loop to add marksPerSubject
         //       5 times
         return total;
