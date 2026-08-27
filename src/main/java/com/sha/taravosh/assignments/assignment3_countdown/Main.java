@@ -34,11 +34,11 @@ public class Main {
         int count = 5;
 
 //        // TODO: Write your countdown logic here
-       while (count >=5){
+       while (count >=5 ) {
         // TODO: Print "Go!" here
         System.out.println(count);
            count--;
        }
-        System.out.println(count);
+        //System.out.println(count);
     }
 }
