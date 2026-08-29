@@ -2,17 +2,49 @@ package com.sha.taravosh.assignments.assignment6_inheritance.assgn1;
 
 public class BankAccount {
 
-    String accountNumber;
-    double balance;
+    private String accountNumber;
+
+    private double balance;
+
+
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public void setAccountNumber(String accountNumber) {
+        if(accountNumber.length()>15){
+            this.accountNumber = accountNumber;
+        }else{
+            throw new RuntimeException("Cannot proceed");
+        }
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
 
     // TODO: Create a constructor to initialize
     // accountNumber and balance
     BankAccount(String accountNumber, double balance){
-        this.accountNumber = accountNumber;
+        setAccountNumber(accountNumber);
         this.balance = balance;
     }
     BankAccount(){
+    }
 
+    void addMoney(double amount){
+        this.balance = this.balance + amount;
+    }
+
+    void subtractMoney(double amount){
+        this.balance = this.balance - amount;
+    }
+
+
+    void showBalance(){
+        System.out.println("Current Balance is "+this.balance);
     }
 
 }

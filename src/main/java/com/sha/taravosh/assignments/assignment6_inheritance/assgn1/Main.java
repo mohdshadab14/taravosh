@@ -6,14 +6,23 @@ public class Main {
         // TODO: Create a SavingsAccount object
         // Example:
         // SavingsAccount account =  new SavingsAccount("ACC101", 50000, 6.5);
-        SavingsAccount my_account = new SavingsAccount("ACC1001",10000, 5.5);
+        SavingsAccount my_account = new SavingsAccount("ACC1001000000000",10000, 5.5);
         // TODO: Print account number
-        System.out.println("Account Number :  "+my_account.accountNumber);
-        System.out.println("Account Balance: " + my_account.balance);
-        System.out.println("Account Interest Rate :" + my_account.interestRate);
+        System.out.println("Account Number :  "+my_account.getAccountNumber());
+
+        my_account.showBalance();
+        System.out.println("Account Interest Rate :" + my_account.getInterestRate());
 
         // TODO: Print balance
         // TODO: Print interest rate
+
+        my_account.addMoney(100);
+
+        my_account.showBalance();
+
+        my_account.subtractMoney(1000);
+
+        my_account.showBalance();
 
     }
 
