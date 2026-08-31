@@ -44,17 +44,20 @@ class BankAccount {
 
     // TODO: Create a constructor that initializes
     //       initialBalance and monthlyDeposit
-
+    public BankAccount(int initialBalance, int monthlyDeposit){
+        this.initialBalance = initialBalance;
+        this.monthlyDeposit = monthlyDeposit;
+    }
 
     int calculateFinalBalance() {
-
         int balance = initialBalance;
-
         // TODO: Use a for loop.
         //       Add monthlyDeposit to balance
         //       12 times.
-
-
+        for(int i =0; i<=12;i++) {
+            balance = balance + monthlyDeposit;
+            //System.out.println("total balance" + balance);
+        }
         return balance;
     }
 }
