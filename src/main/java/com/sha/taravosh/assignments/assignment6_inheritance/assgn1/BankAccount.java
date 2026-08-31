@@ -3,10 +3,7 @@ package com.sha.taravosh.assignments.assignment6_inheritance.assgn1;
 public class BankAccount {
 
     private String accountNumber;
-
     private double balance;
-
-
 
     public String getAccountNumber() {
         return accountNumber;
@@ -24,12 +21,20 @@ public class BankAccount {
         return balance;
     }
 
+    private void setBalance(double balance) {
+        if(balance>0){
+            this.balance = balance;
+        }else{
+            throw new RuntimeException("invalid balance");
+        }
+
+    }
 
     // TODO: Create a constructor to initialize
     // accountNumber and balance
     BankAccount(String accountNumber, double balance){
         setAccountNumber(accountNumber);
-        this.balance = balance;
+        setBalance(balance);
     }
     BankAccount(){
     }
@@ -41,7 +46,6 @@ public class BankAccount {
     void subtractMoney(double amount){
         this.balance = this.balance - amount;
     }
-
 
     void showBalance(){
         System.out.println("Current Balance is "+this.balance);

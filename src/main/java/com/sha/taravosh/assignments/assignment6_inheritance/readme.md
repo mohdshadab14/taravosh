@@ -4,7 +4,7 @@
 
 In this assignment, you will build a small **Banking System** step by step.
 
-You will start with a simple `BankAccount` class and gradually learn:
+You will start with a simple `BankAccount1` class and gradually learn:
 
 * Inheritance
 * Parent and child classes
@@ -37,16 +37,16 @@ For example:
         SavingsAccount       CurrentAccount
 ```
 
-A `BankAccount` contains information common to all accounts:
+A `BankAccount1` contains information common to all accounts:
 
 * Account Number
 * Balance
 
-A `SavingsAccount` can additionally have:
+A `SavingsAccount1` can additionally have:
 
 * Interest Rate
 
-A `CurrentAccount` can additionally have:
+A `CurrentAccount1` can additionally have:
 
 * Minimum Balance
 
@@ -79,7 +79,7 @@ Create a child class:
 SavingsAccount
 ```
 
-which extends `BankAccount`.
+which extends `BankAccount1`.
 
 It should contain:
 
@@ -98,14 +98,14 @@ SavingsAccount
 
 ### Requirements
 
-Create a constructor in `BankAccount` to initialize:
+Create a constructor in `BankAccount1` to initialize:
 
 ```text
 accountNumber
 balance
 ```
 
-Create a constructor in `SavingsAccount` to initialize:
+Create a constructor in `SavingsAccount1` to initialize:
 
 ```text
 accountNumber
@@ -113,7 +113,7 @@ balance
 interestRate
 ```
 
-Create a `SavingsAccount` object:
+Create a `SavingsAccount1` object:
 
 ```java
 SavingsAccount account =
@@ -145,7 +145,7 @@ You should understand:
 
 Understand how multiple classes can inherit from the same parent.
 
-A bank also has `CurrentAccount`.
+A bank also has `CurrentAccount1`.
 
 Create:
 
@@ -168,7 +168,7 @@ BankAccount
       SavingsAccount      CurrentAccount
 ```
 
-`CurrentAccount` should have:
+`CurrentAccount1` should have:
 
 ```text
 minimumBalance
@@ -181,11 +181,11 @@ accountNumber
 balance
 ```
 
-should remain in `BankAccount`.
+should remain in `BankAccount1`.
 
 ### Requirements
 
-Create a constructor for `CurrentAccount`.
+Create a constructor for `CurrentAccount1`.
 
 Create an object:
 
@@ -202,7 +202,7 @@ Balance: 100000
 Minimum Balance: 10000
 ```
 
-Also create a `SavingsAccount` object and print its details.
+Also create a `SavingsAccount1` object and print its details.
 
 ### 💡 What should you learn?
 
@@ -244,7 +244,7 @@ balance
 
 We want to display these common details.
 
-Instead of writing the same code in both child classes, create a method in `BankAccount`:
+Instead of writing the same code in both child classes, create a method in `BankAccount1`:
 
 ```java
 displayAccountDetails()
@@ -259,13 +259,13 @@ Balance: 50000
 
 ### Requirements
 
-Add this method to `BankAccount`.
+Add this method to `BankAccount1`.
 
 ```java
 public void displayAccountDetails()
 ```
 
-Then create a `SavingsAccount` object.
+Then create a `SavingsAccount1` object.
 
 Call:
 
@@ -281,7 +281,7 @@ Then print:
 Interest Rate: 6.5
 ```
 
-Do the same for `CurrentAccount`.
+Do the same for `CurrentAccount1`.
 
 ### Expected output
 
@@ -303,7 +303,7 @@ Instead of writing:
 displayAccountDetails()
 ```
 
-multiple times, we write it once in `BankAccount`.
+multiple times, we write it once in `BankAccount1`.
 
 This is one of the major benefits of inheritance:
 
