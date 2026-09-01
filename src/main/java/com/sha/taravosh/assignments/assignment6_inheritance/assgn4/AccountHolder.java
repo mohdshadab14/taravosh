@@ -28,7 +28,7 @@ public String getName(){
         if(this.age > 0) {
             this.age = Age;
         }else{
-            System.out.println("age must be greater than 0");
+            throw new RuntimeException("age must be >0");
         }
     }
 
@@ -43,7 +43,7 @@ public String getName(){
      if(phoneNumber.length() == 10){
          this.phoneNumber = phoneNumber;
      }else{
-         System.out.println("PhoneNumber musr have atleast 10 digits");
+         throw new RuntimeException("invalid phonenumber");
      }
  }
 // TODO: Create getPhoneNumber()
