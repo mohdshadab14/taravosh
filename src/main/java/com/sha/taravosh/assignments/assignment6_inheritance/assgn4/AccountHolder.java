@@ -24,9 +24,12 @@ public String getName(){
 }
     // TODO: Create setAge()
     //// Validation:// Age must be greater than 0
-    public void setAge(int Age){
-        if(this.age > 0) {
-            this.age = Age;
+    public void setAge(int age){
+
+        //At this point when age is being compared with 0, value present in this.age is 0 hence you need to have comparison on value which you are going to set
+        //if(this.age > 0) {
+        if(age > 0) {
+            this.age = age;
         }else{
             throw new RuntimeException("age must be >0");
         }
