@@ -7,16 +7,15 @@ public class Main {
         AccountHolder holder = new AccountHolder();
 
         // TODO: Set valid name
-
-
+        holder.setName("Musk");
         // TODO: Set valid age
-
-
+        holder.setAge(30);
         // TODO: Set valid phone number
-
-
+        holder.setPhoneNumber("8110089884");
         // TODO: Print all values using getters
-
+        System.out.println("Name : "+ holder.getName());
+        System.out.println("age" + holder.getAge());
+        System.out.println("PhoneNumber"+holder.getPhoneNumber());
 
         // Test validation
 
