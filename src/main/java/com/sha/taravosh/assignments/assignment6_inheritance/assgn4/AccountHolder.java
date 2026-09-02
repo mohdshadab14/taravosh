@@ -30,9 +30,10 @@ public String getName(){
         //if(this.age > 0) {
         if(age > 0) {
             this.age = age;
-        }else{
-            throw new RuntimeException("age must be >0");
         }
+//        else{
+//            throw new RuntimeException("age must be >0");
+//        }
     }
 
     // TODO: Create getAge()
@@ -45,9 +46,10 @@ public String getName(){
  public void setPhoneNumber(String phoneNumber){
      if(phoneNumber.length() == 10){
          this.phoneNumber = phoneNumber;
-     }else{
-         throw new RuntimeException("invalid phonenumber");
      }
+//     else{
+//         throw new RuntimeException("invalid phonenumber");
+//     }
  }
 // TODO: Create getPhoneNumber()
     public String getPhoneNumber(){
