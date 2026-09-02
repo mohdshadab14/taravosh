@@ -19,7 +19,8 @@ public class CollectionExample {
         students[1] = "rahul";
 
         ArrayList<String> listOfStudents = new ArrayList<>();
-
+        //Array: sequence of values of same type
+        //linked list:
         System.out.println(listOfStudents);
 
         listOfStudents.add("Shadab");
