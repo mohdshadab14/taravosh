@@ -11,7 +11,7 @@ public class AccountHolder {
     // TODO: Create setName()
     //// Validation:// Name should not be empty
     public void setName(String Name){
-        if(name != null){
+        if(Name != null){
             this.name = Name;
         }else{
             System.out.println("name should not be empty");
@@ -31,9 +31,9 @@ public String getName(){
         if(age > 0) {
             this.age = age;
         }
-//        else{
-//            throw new RuntimeException("age must be >0");
-//        }
+        else{
+            throw new RuntimeException("age must be >0");
+        }
     }
 
     // TODO: Create getAge()

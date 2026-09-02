@@ -28,10 +28,10 @@ public class AccountHolder {
     // Age must be greater than 0
 
     public void setAge(int age) {
-        if(age > 0){
+        if(age >0){
             this.age = age;
         }else{
-            System.out.println("Invalid age");
+            System.out.println(this.name + " Invalid age" ); // post to this execution the variable age will have its previous value
         }
     }
 

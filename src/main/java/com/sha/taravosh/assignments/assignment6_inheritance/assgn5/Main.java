@@ -48,10 +48,10 @@ public class Main {
         // TODO: Try an invalid age
         holder.setAge(-10);
         // TODO: Try an invalid phone number
-        holder.setPhoneNumber("12345");
+        holder.setPhoneNumber("1234500000");
         // TODO: Print the values again
         // and verify invalid values were rejected
-        System.out.println("new age : " + holder.getAge());
-        System.out.println("new age : " + holder.getPhoneNumber());
+        System.out.println("new age : " + holder.getAge());  // the invalid age is validated in the previous step -> method setAge. unless its over written by another this.name
+        System.out.println("new phoneNumber : " + holder.getPhoneNumber()); // same for the phone number
     }
 }
