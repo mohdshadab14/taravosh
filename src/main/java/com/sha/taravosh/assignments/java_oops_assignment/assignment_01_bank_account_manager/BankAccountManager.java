@@ -12,35 +12,45 @@ public class BankAccountManager {
 
         // TODO 1:
         // Create at least 5 BankAccount objects using the constructor.
-        //
-        // Example:
-        // BankAccount account1 =
-        //         new BankAccount("ACC101", "Shadab", 50000, "Savings");
-
+        BankAccount account1 = new BankAccount("A001","A-One",10000,"Savings Account");
+        BankAccount account2 = new BankAccount("A002","A-Two",15000,"Current Account");
+        BankAccount account3 = new BankAccount("A003","A-Three",12000,"Savings Account");
+        BankAccount account4 = new BankAccount("A004","A-Four",14000,"Current Account");
+        BankAccount account5 = new BankAccount("A005","A-Five",20000,"Savings Account");
 
         // TODO 2:
         // Add all the accounts to the ArrayList.
-
+        accounts.add(account1);
+        accounts.add(account2);
+        accounts.add(account3);
+        accounts.add(account4);
+        accounts.add(account5);
 
         // TODO 3:
         // Use an enhanced for loop to print all accounts.
-
+        for(BankAccount a: accounts){
+           a.displayAccount();
+            System.out.println("--------");
+        }
 
         // TODO 4:
         // Calculate and print the total balance of all accounts.
-        //
         // Expected:
         // Total Bank Balance: XXXXX
-
+        double total_balance = 0;
+        for(BankAccount a:accounts){
+            total_balance = total_balance + a.balance;
+        }
+        System.out.println("total balance = " + total_balance);
 
         // TODO 5:
         // Find the account with the highest balance.
         //
         // Print the account holder and balance.
 
-
         // TODO 6 - BONUS:
         // Count how many Savings and Current accounts exist.
+
     }
 }
 
