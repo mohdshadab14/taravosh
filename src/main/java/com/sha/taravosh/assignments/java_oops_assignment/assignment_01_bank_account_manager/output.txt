@@ -1,0 +1,14 @@
+{
+
+Savings Account=[BankAccount{accountNumber='A001', accountHolderName='A-One', balance=10000.0, accountType='Savings Account'}, BankAccount{accountNumber='A003', accountHolderName='A-Three', balance=12000.0, accountType='Savings Account'}, BankAccount{accountNumber='A005', accountHolderName='A-Five', balance=20000.0, accountType='Savings Account'}],
+Current Account=[BankAccount{accountNumber='A002', accountHolderName='A-Two', balance=15000.0, accountType='Current Account'}, BankAccount{accountNumber='A004', accountHolderName='A-Four', balance=14000.0, accountType='Current Account'}]
+
+}
+
+{Savings Account=
+[
+BankAccount{accountNumber='A001', accountHolderName='A-One', balance=10000.0, accountType='Savings Account'}, BankAccount{accountNumber='A003', accountHolderName='A-Three', balance=12000.0, accountType='Savings Account'}, BankAccount{accountNumber='A005', accountHolderName='A-Five', balance=20000.0, accountType='Savings Account'}],
+DMAT Account=[BankAccount{accountNumber='A006', accountHolderName='A-Six', balance=2000000.0, accountType='DMAT Account'}],
+Current Account=[BankAccount{accountNumber='A002', accountHolderName='A-Two', balance=15000.0, accountType='Current Account'}, BankAccount{accountNumber='A004', accountHolderName='A-Four', balance=14000.0, accountType='Current Account'}]
+}
+

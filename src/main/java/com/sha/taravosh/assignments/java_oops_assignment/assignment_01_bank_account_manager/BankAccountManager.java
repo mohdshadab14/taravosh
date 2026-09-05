@@ -1,9 +1,18 @@
 package com.sha.taravosh.assignments.java_oops_assignment.assignment_01_bank_account_manager;
 
 
+import com.sha.taravosh.assignments.assignment6_inheritance.assgn1.SavingsAccount;
+
 import java.util.ArrayList;
+import java.util.Currency;
+import java.util.HashMap;
 
 public class BankAccountManager {
+
+    private static final String SAVINGS_ACCOUNT = "Savings Account";
+    private static final String CURRENT_ACCOUNT = "Current Account";
+    private static final String DMAT_ACCOUNT = "DMAT Account";
+
 
     public static void main(String[] args) {
 
@@ -12,11 +21,13 @@ public class BankAccountManager {
 
         // TODO 1:
         // Create at least 5 BankAccount objects using the constructor.
-        BankAccount account1 = new BankAccount("A001","A-One",10000,"Savings Account");
-        BankAccount account2 = new BankAccount("A002","A-Two",15000,"Current Account");
-        BankAccount account3 = new BankAccount("A003","A-Three",12000,"Savings Account");
-        BankAccount account4 = new BankAccount("A004","A-Four",14000,"Current Account");
-        BankAccount account5 = new BankAccount("A005","A-Five",20000,"Savings Account");
+        BankAccount account1 = new BankAccount("A001","A-One",10000,SAVINGS_ACCOUNT);
+        BankAccount account2 = new BankAccount("A002","A-Two",15000,CURRENT_ACCOUNT);
+        BankAccount account3 = new BankAccount("A003","A-Three",12000,SAVINGS_ACCOUNT);
+        BankAccount account4 = new BankAccount("A004","A-Four",14000,CURRENT_ACCOUNT);
+        BankAccount account5 = new BankAccount("A005","A-Five",20000,SAVINGS_ACCOUNT);
+        BankAccount account6 = new BankAccount("A006","A-Six",2000000,DMAT_ACCOUNT);
+
 
         // TODO 2:
         // Add all the accounts to the ArrayList.
@@ -25,6 +36,31 @@ public class BankAccountManager {
         accounts.add(account3);
         accounts.add(account4);
         accounts.add(account5);
+        accounts.add(account6);
+
+        // Give me sub lists based on account type
+
+
+
+        HashMap<String,ArrayList<BankAccount>> map = new HashMap<>();
+
+
+        for(BankAccount account:accounts){
+            String key = account.getAccountType();
+
+            if(map.containsKey(key)){
+                ArrayList<BankAccount> value = map.get(key);
+                value.add(account);
+            }else{
+                ArrayList<BankAccount> list = new ArrayList<>();
+                list.add(account);
+                map.put(key,list);
+            }
+        }
+
+        System.out.println(map.keySet());
+
+/*
 
         // TODO 3:
         // Use an enhanced for loop to print all accounts.
@@ -59,7 +95,7 @@ public class BankAccountManager {
         // Count how many Savings and Current accounts exist.
 
 
-        System.out.println("cout of savings account" + accounts.size());
+        System.out.println("cout of savings account" + accounts.size());*/
     }
 }
 

@@ -6,8 +6,5 @@ class CurrentAccount extends BankAccount {
         super(accountHolder, balance);
     }
 
-    @Override
-    void calculateInterest() {
-        System.out.println("Current account does not earn interest.");
-    }
+
 }

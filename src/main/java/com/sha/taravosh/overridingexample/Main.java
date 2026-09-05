@@ -15,7 +15,7 @@ public class Main {
         savingsAccount.displayAccountDetails();
         savingsAccount.calculateInterest();
 
-
+        currentAccount.calculateInterest();
         System.out.println();
 
         System.out.println("----- Current Account -----");
