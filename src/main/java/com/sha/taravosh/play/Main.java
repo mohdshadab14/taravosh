@@ -1,24 +1,35 @@
 package com.sha.taravosh.play;
 
 import java.sql.SQLOutput;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
 
-        Dog dog = new Dog();
-        Lion lion = new Lion();
+        ArrayList<Integer> person = new ArrayList<>();
+        person.add(1000);
+        person.add(500);
+        person.add(5000);
+        person.add(3000);
+        person.add(10000);
+        person.add(6000);
+        person.add(60);
+        person.add(800);
+        person.add(9000);
+        person.add(9000);
 
-        /*dog.name = "Tommy";     // inherited from Animal
-        dog.age = 3;            // inherited from Animal
-        dog.breed = "Labrador"; // Dog's own variable
-
-        System.out.println(dog.name);
-        System.out.println(dog.age);
-        System.out.println(dog.breed);
-*/
-        System.out.println(dog.bark());
-
-        System.out.println(lion.roar());
+        for(Integer p:person){
+            System.out.println("single value" + p);
+        }
+        //empty var
+        Integer maxValue = person.get(0);
+        for(Integer p: person){   //loop every element
+            if(p > maxValue){ //compare with variable
+                System.out.println("replacing max with new max "+ maxValue +" : "+p);
+                maxValue = p;
+            }
+        }
+        System.out.println("Max value"+maxValue);
 
     }
 }

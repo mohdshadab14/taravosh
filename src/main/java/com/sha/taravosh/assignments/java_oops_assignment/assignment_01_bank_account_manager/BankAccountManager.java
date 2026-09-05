@@ -44,13 +44,22 @@ public class BankAccountManager {
         System.out.println("total balance = " + total_balance);
 
         // TODO 5:
-        // Find the account with the highest balance.
-        //
-        // Print the account holder and balance.
+        // Find the account with the highest balance.//// Print the account holder and balance.
+        //imp : CREATE A REFERENCE OF BANKACCOUNT CLASS
+        BankAccount maxValueAccount;
+        maxValueAccount = accounts.getFirst();
 
+        for(BankAccount a: accounts){
+            if (a.balance > maxValueAccount.balance){
+                    maxValueAccount = a;
+            }
+        }
+        System.out.println("max value account" + maxValueAccount.balance);
         // TODO 6 - BONUS:
         // Count how many Savings and Current accounts exist.
 
+
+        System.out.println("cout of savings account" + accounts.size());
     }
 }
 
