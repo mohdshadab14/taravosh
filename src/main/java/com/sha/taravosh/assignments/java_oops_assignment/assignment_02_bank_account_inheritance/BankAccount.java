@@ -4,20 +4,24 @@ public class BankAccount {
 
     // TODO 1:
     // Create these fields:
-    //
-    // accountNumber
-    // accountHolderName
-    // balance
+    String accountNumber;
+    String accountHolder;
+    double balance;
 
-//nowheera assignement
     // TODO 2:
     // Create a constructor to initialize all fields.
-
+    BankAccount(String accountNumber, String accountHolder, double balance){
+        this.accountNumber = accountNumber;
+        this.accountHolder = accountHolder;
+        this.balance = balance;
+    }
 
     // TODO 3:
     // Create a method to display the common account information.
     //
-    // public void displayAccount()
+    public void displayAccount(){
+        System.out.println("Account Number : " + accountNumber + "\nAccountHolder : "+accountHolder + "\nBlance : " + balance);
+    }
 }
 
 
