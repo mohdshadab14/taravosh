@@ -10,7 +10,7 @@ public class SavingsAccount extends BankAccount {
     // TODO 2:
     // Create a constructor.
     // Use super() to initialize the fields
-    // inherited from BankAccount.
+    // inherited from com.sha.taravosh.oops_assignment.bank_account_management.BankAccount.
     SavingsAccount(String accountNumber, String accountHolder, double balance, int interestRate, double minimumBalance){
             super(accountNumber, accountHolder, balance);
             this.interestRate = interestRate;

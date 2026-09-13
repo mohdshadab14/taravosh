@@ -59,7 +59,7 @@ class BankAccount {
 
     @Override
     public String toString() {
-        return "BankAccount{" +
+        return "com.sha.taravosh.oops_assignment.bank_account_management.BankAccount{" +
                 "accountNumber='" + accountNumber + '\'' +
                 ", accountHolderName='" + accountHolderName + '\'' +
                 ", balance=" + balance +

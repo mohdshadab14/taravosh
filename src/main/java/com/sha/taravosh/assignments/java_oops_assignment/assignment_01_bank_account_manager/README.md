@@ -17,7 +17,7 @@ Create a simple banking application using:
 
 ## Requirements
 
-### 1. Create `BankAccount`
+### 1. Create `com.sha.taravosh.oops_assignment.bank_account_management.BankAccount`
 
 Create the following fields:
 
@@ -39,6 +39,8 @@ Create at least **5 different bank accounts**.
 Example:
 
 ```java
+import com.sha.taravosh.oops_assignment.bank_account_management.BankAccount;
+
 BankAccount account =
         new BankAccount(
                 "ACC101",
@@ -55,6 +57,8 @@ BankAccount account =
 Create:
 
 ```java
+import com.sha.taravosh.oops_assignment.bank_account_management.BankAccount;
+
 ArrayList<BankAccount> accounts = new ArrayList<>();
 ```
 

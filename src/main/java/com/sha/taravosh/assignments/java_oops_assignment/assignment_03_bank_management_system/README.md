@@ -29,7 +29,7 @@ Customer
    |
    | has
    ↓
-BankAccount
+com.sha.taravosh.oops_assignment.bank_account_management.BankAccount
    |
    ├── SavingsAccount
    |
@@ -59,12 +59,12 @@ Create a constructor.
 
 ---
 
-# 2. BankAccount
+# 2. com.sha.taravosh.oops_assignment.bank_account_management.BankAccount
 
 Create:
 
 ```java
-class BankAccount
+class com.sha.taravosh.oops_assignment.bank_account_management.BankAccount
 ```
 
 Fields:
@@ -88,6 +88,8 @@ Customer
 Create:
 
 ```java
+import com.sha.taravosh.oops_assignment.bank_account_management.BankAccount;
+
 class SavingsAccount extends BankAccount
 ```
 
@@ -107,6 +109,8 @@ Use `super()` in the constructor.
 Create:
 
 ```java
+import com.sha.taravosh.oops_assignment.bank_account_management.BankAccount;
+
 class CurrentAccount extends BankAccount
 ```
 
@@ -164,6 +168,8 @@ Shadab
 Create:
 
 ```java
+import com.sha.taravosh.oops_assignment.bank_account_management.BankAccount;
+
 ArrayList<BankAccount> accounts = new ArrayList<>();
 ```
 
@@ -325,14 +331,14 @@ Use:
 Before submitting, verify:
 
 * [ ] Created `Customer`
-* [ ] Created `BankAccount`
+* [ ] Created `com.sha.taravosh.oops_assignment.bank_account_management.BankAccount`
 * [ ] Created `SavingsAccount`
 * [ ] Created `CurrentAccount`
 * [ ] Used constructors
 * [ ] Used inheritance
 * [ ] Used `super()`
 * [ ] Created objects using `new`
-* [ ] Used `ArrayList<BankAccount>`
+* [ ] Used `ArrayList<com.sha.taravosh.oops_assignment.bank_account_management.BankAccount>`
 * [ ] Used enhanced `for` loop
 * [ ] Used normal `for` loop
 * [ ] Calculated total balance

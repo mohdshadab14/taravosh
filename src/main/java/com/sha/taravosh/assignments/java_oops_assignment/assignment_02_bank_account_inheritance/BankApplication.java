@@ -23,7 +23,7 @@ public class BankApplication {
         // both SavingsAccount and CurrentAccount objects.
         //
         // Hint:
-        // ArrayList<BankAccount>
+        // ArrayList<com.sha.taravosh.oops_assignment.bank_account_management.BankAccount>
         ArrayList<BankAccount> account = new ArrayList<>();
         // TODO 4:
         // Add all accounts to the ArrayList.

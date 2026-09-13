@@ -16,11 +16,11 @@ public class BankAccountManager {
 
     public static void main(String[] args) {
 
-        // Create an ArrayList to store BankAccount objects
+        // Create an ArrayList to store com.sha.taravosh.oops_assignment.bank_account_management.BankAccount objects
         ArrayList<BankAccount> accounts = new ArrayList<>();
 
         // TODO 1:
-        // Create at least 5 BankAccount objects using the constructor.
+        // Create at least 5 com.sha.taravosh.oops_assignment.bank_account_management.BankAccount objects using the constructor.
         BankAccount account1 = new BankAccount("A001","A-One",10000,SAVINGS_ACCOUNT);
         BankAccount account2 = new BankAccount("A002","A-Two",15000,CURRENT_ACCOUNT);
         BankAccount account3 = new BankAccount("A003","A-Three",12000,SAVINGS_ACCOUNT);
@@ -64,7 +64,7 @@ public class BankAccountManager {
 
         // TODO 3:
         // Use an enhanced for loop to print all accounts.
-        for(BankAccount a: accounts){
+        for(com.sha.taravosh.oops_assignment.bank_account_management.BankAccount a: accounts){
            a.displayAccount();
             System.out.println("--------");
         }
@@ -74,7 +74,7 @@ public class BankAccountManager {
         // Expected:
         // Total Bank Balance: XXXXX
         double total_balance = 0;
-        for(BankAccount a:accounts){
+        for(com.sha.taravosh.oops_assignment.bank_account_management.BankAccount a:accounts){
             total_balance = total_balance + a.balance;
         }
         System.out.println("total balance = " + total_balance);
@@ -82,10 +82,10 @@ public class BankAccountManager {
         // TODO 5:
         // Find the account with the highest balance.//// Print the account holder and balance.
         //imp : CREATE A REFERENCE OF BANKACCOUNT CLASS
-        BankAccount maxValueAccount;
+        com.sha.taravosh.oops_assignment.bank_account_management.BankAccount maxValueAccount;
         maxValueAccount = accounts.getFirst();
 
-        for(BankAccount a: accounts){
+        for(com.sha.taravosh.oops_assignment.bank_account_management.BankAccount a: accounts){
             if (a.balance > maxValueAccount.balance){
                     maxValueAccount = a;
             }
@@ -103,7 +103,7 @@ public class BankAccountManager {
 /*
  * TODO:
  *
- * Create the BankAccount class.
+ * Create the com.sha.taravosh.oops_assignment.bank_account_management.BankAccount class.
  *
  * Fields:
  * - accountNumber

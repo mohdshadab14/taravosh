@@ -32,7 +32,7 @@ public class BankApplication {
 
         // Create:
         //
-        // ArrayList<BankAccount> accounts
+        // ArrayList<com.sha.taravosh.oops_assignment.bank_account_management.BankAccount> accounts
         //
         // Store all accounts in it.
 

@@ -7,7 +7,7 @@ Extend the banking application using inheritance.
 You will create:
 
 ```text
-                 BankAccount
+                 com.sha.taravosh.oops_assignment.bank_account_management.BankAccount
                       |
              --------------------
              |                  |
@@ -16,12 +16,12 @@ You will create:
 
 ---
 
-## Part 1 — BankAccount
+## Part 1 — com.sha.taravosh.oops_assignment.bank_account_management.BankAccount
 
 Create:
 
 ```java
-class BankAccount
+class com.sha.taravosh.oops_assignment.bank_account_management.BankAccount
 ```
 
 Fields:
@@ -41,6 +41,8 @@ Create a constructor.
 Create:
 
 ```java
+import com.sha.taravosh.oops_assignment.bank_account_management.BankAccount;
+
 class SavingsAccount extends BankAccount
 ```
 
@@ -68,6 +70,8 @@ to initialize the parent class fields.
 Create:
 
 ```java
+import com.sha.taravosh.oops_assignment.bank_account_management.BankAccount;
+
 class CurrentAccount extends BankAccount
 ```
 
@@ -96,6 +100,8 @@ Create:
 Create:
 
 ```java
+import com.sha.taravosh.oops_assignment.bank_account_management.BankAccount;
+
 ArrayList<BankAccount> accounts = new ArrayList<>();
 ```
 
@@ -108,9 +114,9 @@ Store both Savings and Current accounts in this list.
 Use:
 
 ```java
-for (BankAccount account : accounts) {
-    // your code
-}
+import com.sha.taravosh.oops_assignment.bank_account_management.BankAccount;for(BankAccount account :accounts){
+        // your code
+        }
 ```
 
 Display all account information.

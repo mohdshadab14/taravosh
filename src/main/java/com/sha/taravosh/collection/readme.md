@@ -649,13 +649,19 @@ for (Student student : students) {
 # 🏦 Real-World Example: Bank Accounts
 
 ```java
+import com.sha.taravosh.oops_assignment.bank_account_management.BankAccount;
+
 List<BankAccount> accounts = new ArrayList<>();
 
-accounts.add(
+accounts.
+
+add(
     new SavingsAccount("ACC101", 5000)
 );
 
-accounts.add(
+        accounts.
+
+add(
     new CurrentAccount("ACC102", 10000)
 );
 ```
@@ -665,6 +671,8 @@ Now collections and OOP work together.
 You can store different child objects inside a parent-type collection:
 
 ```java
+import com.sha.taravosh.oops_assignment.bank_account_management.BankAccount;
+
 List<BankAccount> accounts = new ArrayList<>();
 ```
 
