@@ -8,10 +8,17 @@ public class CurrentAccount extends BankAccount {
     //
     // businessName
     // overdraftLimit
-
+    String businessName;
+    double overdraftLimit;
 
     // TODO:
     // Create constructor.
     //
     // Use super().
+    CurrentAccount(String businessName, double overdraftLimit, String accountNumber, double balance, Customer customer){
+        super(accountNumber,balance,customer);
+        this.businessName = businessName;
+        this.overdraftLimit = overdraftLimit;
+    }
+
 }

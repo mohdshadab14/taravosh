@@ -6,17 +6,30 @@ public class Customer {
     // TODO:
     // Create:
     //
-    // customerId
-    // name
-    // phoneNumber
-    // city
-
+    String customerId;
+    String name;
+    String phoneNumber;
+    String city;
 
     // TODO:
     // Create constructor.
-
+    Customer(String customerId, String name, String phoneNumber, String city){
+        this.customerId = customerId;
+        this.name = name;
+        this.phoneNumber = phoneNumber;
+        this.city = city;
+    }
 
     // TODO:
     // Create displayCustomer() method.
+    public void displayCustomer(){
+        System.out.println("customerID : " + customerId + "\nname : " + name + "\nphoneNumber : " +  phoneNumber + "\nCity : "+city);
+
+    }
+
+//    @Override
+//    public String toString() {
+//        return super.toString();
+//    }
 }
 
