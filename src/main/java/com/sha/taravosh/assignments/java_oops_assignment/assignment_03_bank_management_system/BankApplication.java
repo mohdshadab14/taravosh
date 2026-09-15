@@ -125,7 +125,6 @@ public class BankApplication {
         // ==========================================
         // TODO 8: SEARCH CUSTOMER
         // ==========================================
-
         // Search and display all accounts
         // belonging to a particular customer.
         //
@@ -136,5 +135,17 @@ public class BankApplication {
         // ACC101 -> Savings -> 50000
         // ACC105 -> Current -> 75000
 
+//        searchArray.add(customer1.city);
+//        searchArray.add(customer1.customerId);
+//        searchArray.add(customer1.phoneNumber);
+//        System.out.println(searchArray);
+        for(BankAccount a : accounts){
+            String name = a.getCustomer().name;
+            if(name == "Roshna"){
+                System.out.println(a.getCustomer().name);
+                a.displayAccount();
+            }
+
+        }
     }
 }
