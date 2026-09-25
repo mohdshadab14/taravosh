@@ -1,3 +1,17 @@
 spring:
   application:
     name: taravosh
+
+  datasource:
+    url: jdbc:postgresql://ep-summer-mouse-ae3ilg7a-pooler.c-2.us-east-2.aws.neon.tech/neondb?sslmode=require
+    username: neondb_owner
+    password: npg_wMmcG0pke3YQ
+    driver-class-name: org.postgresql.Driver
+  
+    hikari:
+      maximum-pool-size: 5
+      hikari.minimum-idle: 0
+      hikari.max-lifetime: 300000
+      connection-timeout: 30000
+server:
+  port: ${PORT:8080}
