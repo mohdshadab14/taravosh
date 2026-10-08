@@ -46,4 +46,8 @@ public class CustomerService {
                 customer.getPhoneNumber()
         );
     }
+    public int deleteCustomer(long id) {
+
+        return jdbc.update("DELETE FROM customer WHERE id = ?", id);
+    }
 }
