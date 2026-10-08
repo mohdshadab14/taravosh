@@ -36,4 +36,14 @@ public class CustomerService {
                 customerMapper
         );
     }
+
+    public void createCustomer(Customer customer) {
+        jdbc.update(
+                "INSERT INTO customer (first_name, last_name, email, phone) VALUES (?, ?, ?, ?)",
+                customer.getFirstName(),
+                customer.getLastName(),
+                customer.getEmail(),
+                customer.getPhoneNumber()
+        );
+    }
 }

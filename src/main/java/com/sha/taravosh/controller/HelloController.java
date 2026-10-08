@@ -7,6 +7,8 @@ import com.sha.taravosh.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.AutoConfigureOrder;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -54,6 +56,13 @@ public class HelloController {
         List<Customer> customers = studentService.getCustomerFromStudent();
         System.out.println(customers);
         return customers;
+    }
+
+    @PostMapping("/createCustomer")
+    public String createCustomer(@RequestBody Customer customer) {
+        System.out.println("Inside create customer");
+        customerService.createCustomer(customer);
+        return "Customer created";
     }
 
 }
