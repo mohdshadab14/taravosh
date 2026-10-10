@@ -5,7 +5,6 @@ import com.sha.taravosh.model.Student;
 import com.sha.taravosh.service.CustomerService;
 import com.sha.taravosh.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.AutoConfigureOrder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -68,4 +67,10 @@ public class HelloController {
         return rows > 0 ? "Customer deleted" : "Customer not found";
     }
 
+    @GetMapping("getCustomers/{id}")
+    public List<Customer> getCustomers(@PathVariable long id){
+        System.out.println("Try to get one customer with id");
+        List<Customer> customers = customerService.getCustomers(id);
+        return customers;
+    }
 }

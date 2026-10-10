@@ -50,4 +50,11 @@ public class CustomerService {
 
         return jdbc.update("DELETE FROM customer WHERE id = ?", id);
     }
+
+    public List<Customer> getCustomers (long id){
+        List<Customer> result = jdbc.query("select * from customer where id = ?", customerMapper, id);
+        return result;
+    }
+
+
 }
