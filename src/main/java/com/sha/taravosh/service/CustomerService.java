@@ -46,15 +46,4 @@ public class CustomerService {
                 customer.getPhoneNumber()
         );
     }
-    public int deleteCustomer(long id) {
-
-        return jdbc.update("DELETE FROM customer WHERE id = ?", id);
-    }
-
-    public List<Customer> getCustomers (long id){
-        List<Customer> result = jdbc.query("select * from customer where id = ?", customerMapper, id);
-        return result;
-    }
-
-
 }

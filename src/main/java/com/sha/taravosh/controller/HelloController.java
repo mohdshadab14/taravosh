@@ -5,7 +5,11 @@ import com.sha.taravosh.model.Student;
 import com.sha.taravosh.service.CustomerService;
 import com.sha.taravosh.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.boot.autoconfigure.AutoConfigureOrder;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
@@ -60,17 +64,5 @@ public class HelloController {
         customerService.createCustomer(customer);
         return "Customer created";
     }
-    @DeleteMapping("/deleteCustomer/{id}")
-    public String deleteCustomer(@PathVariable long id) {
-        System.out.println("Inside delete customer");
-        int rows = customerService.deleteCustomer(id);
-        return rows > 0 ? "Customer deleted" : "Customer not found";
-    }
 
-    @GetMapping("getCustomers/{id}")
-    public List<Customer> getCustomers(@PathVariable long id){
-        System.out.println("Try to get one customer with id");
-        List<Customer> customers = customerService.getCustomers(id);
-        return customers;
-    }
 }
