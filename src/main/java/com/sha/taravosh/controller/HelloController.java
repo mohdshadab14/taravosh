@@ -6,10 +6,7 @@ import com.sha.taravosh.service.CustomerService;
 import com.sha.taravosh.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.AutoConfigureOrder;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -17,6 +14,7 @@ import java.util.List;
 public class HelloController {
 
     //injuction classes
+    //@Autowired tells Spring, “I need this object here; please provide the appropriate Spring-managed instance.”
     @Autowired
     private CustomerService customerService;
 
@@ -36,12 +34,11 @@ public class HelloController {
     public List<Student> getStudents() {
         System.out.println("Inside get students");
         //StudentService studentService = new StudentService();
-
         List<Student> students = studentService.getStudents();
         System.out.println(students);
         return students;
     }
-
+//@GetMapping - tells Spring Boot to execute this method when a matching HTTP GET request arrives.
     @GetMapping("/getCustomers")
     public List<Customer> getCustomers() {
         System.out.println("Inside get customers");
@@ -58,11 +55,38 @@ public class HelloController {
         return customers;
     }
 
-    /*@PostMapping("/createCustomer")
+    //GetMapping for One Customer
+    @GetMapping("/getCustomers/{id}")
+    public List<Customer> getCustomers(long id){
+        System.out.println("Inside getCustmers to get one");
+        return customerService.getCustomers(id);
+    }
+
+    @PostMapping("/createCustomer")
     public String createCustomer(@RequestBody Customer customer) {
-        System.out.println("Inside create customer");
+        System.out.println("Inside create customer"+customer);
         customerService.createCustomer(customer);
         return "Customer created";
-    }*/
+    }
+/*
+    @PutMapping("/updateCustomer")
+    public String updateCustomer(@RequestBody Customer customer) {
+        System.out.println("Inside create customer"+customer);
+        customerService.updateCustomer(customer);
+        return "Customer updated";
+    }
+    */
+
+
+
+/*
+    @PutMapping("/deleteCustomer/{id}")
+    public List<Customer> deleteCustomer(long id){
+        System.out.println("inside delete resp api call method");
+        //List<Customer> deletedCustomer = customerService.getOneCustomer(id);
+        customerService.deleteCustomer(id);
+         return "deleted";
+    }
+ */
 
 }

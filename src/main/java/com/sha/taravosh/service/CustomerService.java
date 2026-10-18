@@ -23,6 +23,12 @@ public class CustomerService {
         return customerRepository.getCustomers();
     }
 
+    public List<Customer> getCustomers(long id){
+        System.out.println("value"+id);
+        //return customerRepository.getCustomers();
+        return customerRepository.getOneCustomer(id);
+    }
+
    /* public void createCustomer(Customer customer) {
         jdbc.update(
                 "INSERT INTO customer (first_name, last_name, email, phone) VALUES (?, ?, ?, ?)",
@@ -32,4 +38,22 @@ public class CustomerService {
                 customer.getPhoneNumber()
         );
     }*/
+    public void createCustomer(Customer customer){
+        System.out.println("INSIDE CREATE CUSTOMER");
+        customerRepository.createCustomer(customer);
+        System.out.println("Customer values"+customer);
+        //customerRepository.createCustomer(customer);
+//    customerRepository.createCustomer (
+//            customer.getFirstName(),
+//            customer.getLastName(),
+//            customer.getEmail(),
+//            customer.getPhoneNumber()
+//       );
+     }
+
+     public void deleteCustomer(long id){
+         System.out.println("Inside delete customer - customer service");
+         customerRepository.deleteCustomer(id);
+     }
+
 }

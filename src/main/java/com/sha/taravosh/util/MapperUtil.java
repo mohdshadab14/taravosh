@@ -14,9 +14,9 @@ public final class MapperUtil {
     public static String resourceToString(String path) {
         try (InputStream is = MapperUtil.class.getResourceAsStream(path);
              ByteArrayOutputStream baos = new ByteArrayOutputStream()) {
-            if (is == null) {
-                return null;
-            }
+                if (is == null) {
+                    return null;
+                }
             is.transferTo(baos);
             return baos.toString();
         }catch (IOException e) {

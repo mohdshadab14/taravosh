@@ -17,7 +17,10 @@ public class CustomerRepository {
     }
 
     private final static String SELECT_ALL_CUSTOMERS = MapperUtil.resourceToString("/sql/selectAllCustomers.sql");
-
+//above final variable value is coming from the file path. the resourceToString read the path as variable and return output
+    private final String SELECT_ONE_CUSTOMER = MapperUtil.resourceToString("/sql/selectCustomerOnCondition");
+    private  static String CREATE_CUSTOMERS = MapperUtil.resourceToString("/sql/createCustomer.sql");
+    private final String DELETE_CUSTOMER = MapperUtil.resourceToString("/sql/deleteCustomer.sql");
 
     private final RowMapper<Customer> customerMapper = (rs, rowNum) -> {
         Customer c = new Customer();
@@ -36,4 +39,30 @@ public class CustomerRepository {
                 customerMapper
         );
     }
+
+    public List<Customer> getOneCustomer(long id){
+        return jdbc.query(SELECT_ONE_CUSTOMER,
+                customerMapper, id);
+ }
+
+public List<Customer> createCustomer(Customer customer){
+    System.out.println("inside repository - create customer");
+    //System.out.println("CREATE_CUSTOMERS"+CREATE_CUSTOMERS);
+    return jdbc.query(
+           CREATE_CUSTOMERS,
+           customerMapper,
+           customer.getFirstName(),
+           customer.getLastName(),
+           customer.getEmail(),
+           customer.getPhoneNumber()
+           );
+}
+
+public List<Customer> deleteCustomer(long id){
+    System.out.println("INSIDE DELETE - repository");
+    return jdbc.query(
+            DELETE_CUSTOMER,
+            customerMapper,
+            id);
+}
 }
