@@ -58,11 +58,11 @@ public class HelloController {
         return customers;
     }
 
-    @PostMapping("/createCustomer")
+    /*@PostMapping("/createCustomer")
     public String createCustomer(@RequestBody Customer customer) {
         System.out.println("Inside create customer");
         customerService.createCustomer(customer);
         return "Customer created";
-    }
+    }*/
 
 }
