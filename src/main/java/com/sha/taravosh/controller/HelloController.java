@@ -57,36 +57,32 @@ public class HelloController {
 
     //GetMapping for One Customer
     @GetMapping("/getCustomers/{id}")
-    public List<Customer> getCustomers(long id){
-        System.out.println("Inside getCustmers to get one");
+    public List<Customer> getCustomers(@PathVariable Long id){
+        System.out.println("Inside getCustmers to get one value of id. ---" + id);
         return customerService.getCustomers(id);
     }
 
     @PostMapping("/createCustomer")
     public String createCustomer(@RequestBody Customer customer) {
         System.out.println("Inside create customer"+customer);
-        customerService.createCustomer(customer);
-        return "Customer created";
+       return customerService.createCustomer(customer);
+
     }
-/*
+
     @PutMapping("/updateCustomer")
     public String updateCustomer(@RequestBody Customer customer) {
         System.out.println("Inside create customer"+customer);
-        customerService.updateCustomer(customer);
-        return "Customer updated";
+        return customerService.updateCustomer(customer);
     }
-    */
 
 
-
-/*
-    @PutMapping("/deleteCustomer/{id}")
-    public List<Customer> deleteCustomer(long id){
+    @DeleteMapping("/deleteCustomer/{id}")
+    public String deleteCustomer(@PathVariable long id){
         System.out.println("inside delete resp api call method");
         //List<Customer> deletedCustomer = customerService.getOneCustomer(id);
-        customerService.deleteCustomer(id);
-         return "deleted";
+        return customerService.deleteCustomer(id);
+
     }
- */
+
 
 }
