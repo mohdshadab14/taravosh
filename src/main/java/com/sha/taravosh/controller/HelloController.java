@@ -84,5 +84,12 @@ public class HelloController {
 
     }
 
+    @GetMapping("/getGroupByEmail")
+        public List<Customer> getGroupByEmail(){
+        System.out.println("fetching group date");
+        return customerService.getGroupByEmail();
+        }
+
+
 
 }

@@ -29,15 +29,6 @@ public class CustomerService {
         return customerRepository.getOneCustomer(id);
     }
 
-   /* public void createCustomer(Customer customer) {
-        jdbc.update(
-                "INSERT INTO customer (first_name, last_name, email, phone) VALUES (?, ?, ?, ?)",
-                customer.getFirstName(),
-                customer.getLastName(),
-                customer.getEmail(),
-                customer.getPhoneNumber()
-        );
-    }*/
     public String createCustomer(Customer customer){
         System.out.println("INSIDE CREATE CUSTOMER");
         return customerRepository.createCustomer(customer);
@@ -55,5 +46,14 @@ public class CustomerService {
          System.out.println("Inside delete customer - customer service");
          return customerRepository.deleteCustomer(id);
      }
+
+    public List<Customer> getGroupByEmail(){
+        System.out.println("Inside get by email - service");
+
+        return customerRepository.groupbyCustomer();
+    }
+
+
+
 
 }
