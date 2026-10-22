@@ -7,6 +7,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.SequencedCollection;
 
@@ -47,12 +48,34 @@ public class CustomerService {
          return customerRepository.deleteCustomer(id);
      }
 
-    public List<Customer> getGroupByEmail(){
+    public HashMap<String,ArrayList<Customer>> getGroupByEmail(){
         System.out.println("Inside get by email - service");
-
-        return customerRepository.groupbyCustomer();
+        List<Customer> customersList = customerRepository.getCustomers();
+        return constructGroupByEmailresponse(customersList);
     }
+    //Bring the manupulation to separate method - create new method with parameters List<Customer>
+    private HashMap<String,ArrayList<Customer>> constructGroupByEmailresponse(List<Customer> customerList){
+        HashMap<String,ArrayList<Customer>> customersMap = new HashMap<>();
+        //for each element c of Customer in customerlist
 
+        for(Customer c:customerList){
+            String email = c.getEmail();
+            String domain = email.substring(email.lastIndexOf("@") + 1)
+                    .toLowerCase();
+            //ArrayList<Customer> customerDetails = new ArrayList<>();
+            if(customersMap.containsKey(domain)){
+              ArrayList<Customer> result =  customersMap.get(domain);
+              result.add(c);
+            }else{
+                ArrayList<Customer> customerDetails = new ArrayList<>();
+                customerDetails.add(c);
+                customersMap.put(domain,customerDetails);
+            }
+//
+        }
+        System.out.println("customersMap----" + customersMap);
+        return customersMap;
+    }
 
 
 

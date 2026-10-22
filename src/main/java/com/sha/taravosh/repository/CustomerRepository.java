@@ -22,7 +22,7 @@ public class CustomerRepository {
     private final static String CREATE_CUSTOMERS = MapperUtil.resourceToString("/sql/createCustomer.sql");
     private final static String DELETE_CUSTOMER = MapperUtil.resourceToString("/sql/deleteCustomer.sql");
     private final static String UPDATE_CUSTOMER = MapperUtil.resourceToString("/sql/updateCustomer.sql");
-    private final static String CUSTOMER_GROUP = MapperUtil.resourceToString("sql/groupbyCustomer.sql");
+    private final static String CUSTOMER_GROUP = MapperUtil.resourceToString("/sql/groupbyCustomer.sql");
     private final RowMapper<Customer> customerMapper = (rs, rowNum) -> {
         Customer c = new Customer();
         c.setId(rs.getLong("id"));

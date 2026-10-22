@@ -7,7 +7,8 @@ import com.sha.taravosh.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.AutoConfigureOrder;
 import org.springframework.web.bind.annotation.*;
-
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 @RestController
@@ -85,9 +86,10 @@ public class HelloController {
     }
 
     @GetMapping("/getGroupByEmail")
-        public List<Customer> getGroupByEmail(){
-        System.out.println("fetching group date");
-        return customerService.getGroupByEmail();
+        public HashMap<String,ArrayList<Customer>> getGroupByEmail(){
+            System.out.println("fetching group data");
+
+            return customerService.getGroupByEmail();
         }
 
 
