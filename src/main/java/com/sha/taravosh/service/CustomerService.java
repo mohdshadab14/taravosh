@@ -51,8 +51,41 @@ public class CustomerService {
     public HashMap<String,ArrayList<Customer>> getGroupByEmail(){
         System.out.println("Inside get by email - service");
         List<Customer> customersList = customerRepository.getCustomers();
-        return constructGroupByEmailresponse(customersList);
+        //return constructGroupByEmailresponse(customersList);
+        return groupByDomain(customersList);
     }
+
+    private HashMap<String, ArrayList<Customer>> groupByDomain(List<Customer> customersList){
+        HashMap<String, ArrayList<Customer>> domainMap = new HashMap<>();
+        for(Customer customer:customersList ){
+            String email = customer.getEmail();
+            String domainOnly;
+           /*
+           if (email != null && email.contains("@")) {
+                String[] parts = email.split("@", 2);
+                domainOnly = parts[1];
+            }
+            */
+             domainOnly = email.split("@", 2)[1];
+
+             if(domainMap.containsKey(domainOnly)){
+                ArrayList<Customer> result = domainMap.get(domainOnly);
+                 System.out.println("result---" + result);
+                 result.add(customer);
+             }else{
+                 ArrayList<Customer> customerArray = new ArrayList<>();
+                 customerArray.add(customer);
+                 domainMap.put(domainOnly,customerArray);
+
+             }
+        }
+        return domainMap;
+    }
+
+
+
+
+
     //Bring the manupulation to separate method - create new method with parameters List<Customer>
     private HashMap<String,ArrayList<Customer>> constructGroupByEmailresponse(List<Customer> customerList){
         HashMap<String,ArrayList<Customer>> customersMap = new HashMap<>();
@@ -76,7 +109,5 @@ public class CustomerService {
         System.out.println("customersMap----" + customersMap);
         return customersMap;
     }
-
-
 
 }
